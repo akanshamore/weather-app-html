@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Tailwind CSS</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="scripts.js"></script>
 </head>
 
@@ -15,7 +15,10 @@
     </header>
     <main class="p-4 flex flex-col items-center">
         <div class="mb-4 w-full max-w-xs">
-            <input id="locationInput" type="text" placeholder="Enter location" class="border p-2 w-full" />
+            <input id="locationInput" type="text" placeholder="Enter location" class="border p-2 w-full mb-2" />
+            <select id="cityDropdown" class="border p-2 w-full mb-2">
+                <option value="" selected disabled>Select a previously searched city</option>
+            </select>
             <button id="searchButton" class="bg-blue-500 text-white p-2 w-full mt-2">Search</button>
         </div>
         <p class="mb-4 text-gray-700">-------------Or-------</p>
