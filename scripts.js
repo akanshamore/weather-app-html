@@ -132,17 +132,25 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
 
     // Displaying the 5-day forecast
-    let forecast =
-      '<div class="mt-4"><h3 class="text-lg font-semibold">3-Day Forecast</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">';
+    let forecast = `<div class="mt-4">
+    <h3 class="text-lg font-semibold">
+    3-Day Forecast</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">`;
 
     data.forecast.forecastday.forEach((day) => {
       forecast += `
-        <div class="bg-gray-100 p-4 rounded shadow">
-          <p>${new Date(day.date).toLocaleDateString()}</p>
-          <img src="${day.day.condition.icon}" alt="Weather icon">
-          <p>Temp: ${day.day.avgtemp_c}°C</p>
+        <div class="bg-gray-100 p-4 rounded shadow ">
+         <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">${new Date(
+           day.date
+         ).toLocaleDateString()}</h4>
+         <div class="flex items-center justify-between">
+         <div class="flex-1">
+         <p>Temp: ${day.day.avgtemp_c}°C</p>
           <p>Wind: ${day.day.maxwind_kph} kph</p>
           <p>Humidity: ${day.day.avghumidity}%</p>
+         </div>
+          <img src="${day.day.condition.icon}" alt="Weather icon">
+         </div>          
         </div>
       `;
     });
