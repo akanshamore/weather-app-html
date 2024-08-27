@@ -2,15 +2,15 @@
 
 ## Description
 
-A responsive weather app that allows users to search for weather information by city name or use their current location. The app provides extended forecasts for up to 5 days, including temperature, weather condition, wind, and humidity. The app also saves previously searched cities for easy access.
+A responsive weather app that allows users to search for weather information by city name or use their current location. The app provides extended forecasts for up to 3 days, including temperature, weather condition, wind, and humidity. The app also saves previously searched cities for easy access.
 
 ## Features
 
-- **Search by Location:** Enter a city name to get the current weather and a 5-day forecast.
+- **Search by Location:** Enter a city name to get the current weather and a 3-day forecast.
 - **Current Location:** Use the browser's geolocation API to get weather information for your current location.
-- **Extended Forecast:** View weather forecasts for up to 5 days, including temperature, weather condition, wind, and humidity.
+- **Extended Forecast:** View weather forecasts for up to 3 days, including temperature, weather condition, wind, and humidity.
 - **City History:** Previously searched cities are saved and available for quick access.
-- **Responsive Design:** The app is designed to work on desktop, tablet, and mobile devices.
+- **Responsive Design:** The app is designed to work on desktop, and mobile devices.
 
 ## Technologies Used
 
