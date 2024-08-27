@@ -120,11 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayWeather(data) {
     const currentWeather = `
-      <h2 class="text-xl font-semibold">${data.location.name}, ${data.location.country}</h2>
-      <p class="mt-2">Temperature: ${data.current.temp_c}°C</p>
-      <p>Condition: ${data.current.condition.text}</p>
-      <img src="${data.current.condition.icon}" alt="Weather icon" class="mt-2">
-    `;
+    <div class="bg-red-500 text-white p-4 rounded shadow-md flex items-center justify-between">
+      <div class="flex-1">
+        <h2 class="text-xl font-semibold">${data.location.name}, ${data.location.country}</h2>
+        <p class="mt-2 text-lg">Temperature: ${data.current.temp_c}°C</p>
+        <p class="text-base">Condition: ${data.current.condition.text}</p>
+        <p class="text-base">Humidity: ${data.current.humidity}%</p>
+      </div>
+      <img src="${data.current.condition.icon}" alt="Weather icon" class="w-24 h-24 ml-4">
+    </div>
+  `;
 
     // Displaying the 5-day forecast
     let forecast =
